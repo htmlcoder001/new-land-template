@@ -1213,6 +1213,7 @@ textarea::placeholder {
 
 .header-area .header-inner-box .logo img {
   margin-top: 0;
+  margin-right: 12px;
 }
 
 .header-area.absolute-header {
@@ -2777,6 +2778,10 @@ ul.service-list li i {
 .counter-num {
   display: flex;
   align-items: baseline;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1;
+  color: #0984E3;
 }
 .counter-num span {
   font-size: 50px;
@@ -3028,6 +3033,8 @@ ul.service-list li i {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  flex: 1 0 170px;
+  max-width: 170px;
 }
 @media (max-width: 767px) {
   .counter-bg {
