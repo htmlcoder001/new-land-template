@@ -1214,6 +1214,7 @@ textarea::placeholder {
 .header-area .header-inner-box .logo img {
   margin-top: 0;
   margin-right: 12px;
+  max-width: 200px;
 }
 
 .header-area.absolute-header {
