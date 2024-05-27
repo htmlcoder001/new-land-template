@@ -90,3 +90,23 @@
 	.flaticon-freight-wagon:before {
 		content: "\f10f";
 	}
+	
+	.flaticon-call-centre:before {
+		content: "";
+		
+		width: 45px;
+		height: 45px;
+		
+		background-image: url(../img/icon/call-centre.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	
+	.flaticon-consulting:before {
+		content: "";
+		
+		width: 45px;
+		height: 45px;
+	}

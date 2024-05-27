@@ -451,3 +451,26 @@
 
 	/*	responsive menu end */
 }
+
+@media (max-width: 575px) {
+	.contact-list-wrap > div > div:last-child > ul.contact-list {
+		margin-top: 0;
+	}
+	
+	.process-wrap .row .col-sm-4 {
+		flex: 0 0 auto;
+		width: 33.33333333%;
+	}
+}
+
+@media (max-width: 375px) {
+	.single-process-area h5 {
+		font-size: 16px;
+		line-height: 21px;
+		margin-top: 15px;
+	}
+	
+	.counter-num span {
+		font-size: 32px;
+	}
+}

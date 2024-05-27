@@ -88,7 +88,7 @@
     dots: true,
     nav: false,
     loop: true,
-    autoplay: true,
+    autoplay: false,
     smartSpeed: 1000,
     responsiveClass: true,
     responsive: {
@@ -203,7 +203,7 @@
       margin: 30,
       dots: false,
       nav: false,
-      loop: false,
+      loop: true,
       autoplay: true,
       navText: [
         "<i class='las la-arrow-left'></i>",
@@ -403,10 +403,10 @@
 
   //Counter Up
 
-  $(".counter-number span").counterUp({
+  /*$(".counter-number span").counterUp({
     delay: 10,
     time: 1000,
-  });
+  });*/
 
   //Magnific Pop-up
 
