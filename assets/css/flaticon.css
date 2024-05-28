@@ -109,4 +109,36 @@
 		
 		width: 45px;
 		height: 45px;
+		
+		background-image: url(../img/icon/consulting.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	
+	.flaticon-fulfillment:before {
+		content: "";
+		
+		width: 45px;
+		height: 45px;
+		
+		background-image: url(../img/icon/fulfillment.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
+	}
+	
+	.flaticon-courier-services:before {
+		content: "";
+		
+		width: 45px;
+		height: 45px;
+		
+		background-image: url(../img/icon/courier-services.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		-webkit-background-size: contain;
+		background-size: contain;
 	}

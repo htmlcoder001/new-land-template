@@ -11,6 +11,7 @@ Version: 1.0
 -----------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap);
 /*--
     - Common CSS 
 -----------------------------------------*/
@@ -1212,9 +1213,7 @@ textarea::placeholder {
 }
 
 .header-area .header-inner-box .logo img {
-  margin-top: 0;
-  margin-right: 12px;
-  max-width: 200px;
+
 }
 
 .header-area.absolute-header {
@@ -5814,13 +5813,23 @@ p.privacy a:not(:last-of-type)::after {
   background: #0D232E;
 }
 
-/*
 
-
-
-
-
-
-
-
- */
+div.logo .navbar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 30px;
+  font-weight: 400;
+  color: #485460;
+  width: 160px;
+  gap: 10px;
+  font-family: "Raleway", sans-serif;
+}
+.footer-up div.logo .navbar-brand {
+  color: #ffffff;
+}
+div.logo a.navbar-brand img {
+  width: 50px;
+  min-width: 50px;
+  margin: 0;
+}
