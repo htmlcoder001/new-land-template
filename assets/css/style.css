@@ -2722,6 +2722,7 @@ ul.service-list li i {
   display: block;
   overflow: hidden;
   border-radius: 12px 12px 0 0;
+  height: 279px;
 }
 
 .service-thumb img {
@@ -2730,6 +2731,8 @@ ul.service-list li i {
   transition-timing-function: ease-in-out;
   transition-duration: 0.7s;
   transition-property: all;
+  height: 100%;
+  object-fit: cover;
 }
 
 .service-single:hover .service-thumb img {
