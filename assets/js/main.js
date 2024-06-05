@@ -592,6 +592,10 @@
 
       webt_select[i].classList.add('--list-opened');
 
+      webt_select[i].querySelector('.webt-select-list .webt-select-list-item').addEventListener('click', () => {
+
+      });
+
     });
   }
 

@@ -5976,6 +5976,10 @@ button[type="submit"].form-button-submit {
   height: 100%;
   width: 100%;
   pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .webt-select-list {
   background-color: #fff;
@@ -6022,6 +6026,7 @@ button[type="submit"].form-button-submit {
   text-align: left;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  display: block;
 }
 .webt-select-item-input {
   display: none;
@@ -6031,4 +6036,5 @@ button[type="submit"].form-button-submit {
 }
 .webt-select-item-input:checked + .webt-select-item-title {
   font-weight: bold;
+  color: #000000;
 }
