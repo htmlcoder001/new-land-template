@@ -205,35 +205,35 @@
                     </div>
                     <p>Please fill out the contact form below with your enquiry</p>
                     <div class="contact_form">
-                        <form class="comment-one_form contact-form-validated" novalidate="novalidate">
+                        <form class="comment-one_form contact-form-validated" id="contact_form">
                             <div class="row">
                                 <div class="col-xl-6">
                                     <div>
-                                        <input type="text" placeholder="Your Name" name="name">
+                                        <input type="text" placeholder="Your Name" name="contact_form_name">
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div>
-                                        <input type="email" placeholder="Email Address" name="email">
+                                        <input type="email" placeholder="Email Address" name="contact_form_email">
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div>
-                                        <input type="tel" placeholder="Phone Number" name="phone">
+                                        <input type="tel" placeholder="Phone Number" name="contact_form_phone">
                                     </div>
                                 </div>
                                 <div class="col-xl-6">
                                     <div>
-                                        <input type="text" placeholder="Subject" name="Subject">
+                                        <input type="text" placeholder="Subject" name="contact_form_subject">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xl-12">
                                     <div>
-                                        <textarea name="message" placeholder="Write a Message"></textarea>
+                                        <textarea name="contact_form_message" placeholder="Write a Message"></textarea>
                                     </div>
-                                    <a href="#" class="main-btn primary">Send Message<i class="las la-arrow-right"></i></a>
+                                    <button type="submit" class="main-btn primary form-button-submit">Send Message<i class="las la-arrow-right"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -268,24 +268,22 @@
 
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
-                                <h6>Company</h6>
+                                <h6>&nbsp;</h6>
                                 <ul>
                                     <li>
-                                        <a href="#">About Us</a>
-                                        <a href="#">Meet Our Team</a>
-                                        <a href="project.html">Our Project</a>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="index.html">Home</a>
+                                        <a href="index.html#our_services">Services</a>
+                                        <a href="index.html#our_system">Our System</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 wow fadeInUp animated" data-wow-delay="300ms">
-                                <h6>Services</h6>
+                                <h6>&nbsp;</h6>
                                 <ul>
                                     <li>
-                                        <a href="#">Fulfilment for online stores</a>
-                                        <a href="#">Courier services</a>
-                                        <a href="#">Call Centre</a>
-                                        <a href="#">Consulting</a>
+                                        <a href="index.html#delivered_pckages">Our Clients</a>
+                                        <a href="contact.html">Contact</a>
+                                        <a href="index.html#form_block">Get Started</a>
                                     </li>
                                 </ul>
                             </div>
@@ -323,9 +321,7 @@
                     <div class="social-area">
                         <a href=""><i class="lab la-facebook-f"></i></a>
                         <a href=""><i class="lab la-youtube"></i></a>
-                        <a href=""><i class="lab la-twitter"></i></a>
                         <a href=""><i class="lab la-instagram"></i></a>
-                        <a href=""><i class="lab la-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -334,6 +330,13 @@
 
     <!-- Scroll Top Area -->
     <a href="#top" class="go-top"><i class="las la-angle-up"></i></a>
+
+    <div class="overlay"></div>
+    
+    <div class="form-notification">
+        <p class="form-notification__text">Form has been sent!</p>
+        <p class="form-notification__text --error-text">Something wrong. Please try again.</p>
+    </div>
 
     <!-- Popper JS -->
     <script src="assets/js/popper.min.js"></script>

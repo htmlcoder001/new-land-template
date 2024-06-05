@@ -430,7 +430,7 @@
 
   // Show or hide the sticky footer button
   $(window).on("scroll", function () {
-    if ($(this).scrollTop() > 4000) {
+    if ($(this).scrollTop() > 2000) {
       $(".go-top").fadeIn(200);
     } else {
       $(".go-top").fadeOut(200);
@@ -445,7 +445,7 @@
       {
         scrollTop: 0,
       },
-      1500
+      300
     );
   });
 
@@ -505,6 +505,67 @@
     $(this).addClass("active");
   });
 
+
+
+  $('#main_form').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'post',
+      url: '/mail/main_form.php',
+      data: $('#main_form').serialize(),
+      success: () => {
+        $('#main_form').addClass('form-sent');
+        $('body').addClass('form-success');
+
+        setTimeout(() => {
+          $('body').removeClass('form-success');
+        }, 2500);
+      },
+      error: () => {
+        $('body').addClass('form-not-success');
+
+        setTimeout(() => {
+          $('body').removeClass('form-not-success');
+        }, 2500);
+      }
+    });
+  });
+
+  $('#contact_form').on('submit', function (e) {
+    e.preventDefault();
+    $.ajax({
+      type: 'post',
+      url: '/mail/contact_form.php',
+      data: $('#contact_form').serialize(),
+      success: () => {
+        $('#contact_form').addClass('form-sent');
+        $('body').addClass('form-success');
+
+        setTimeout(() => {
+          $('body').removeClass('form-success');
+        }, 2500);
+      },
+      error: () => {
+        $('body').addClass('form-not-success');
+
+        setTimeout(() => {
+          $('body').removeClass('form-not-success');
+        }, 2500);
+      }
+    });
+  });
+
+  $(".overlay").on("click", function () {
+    if ($('body').hasClass('form-success')) {
+      $('body').removeClass('form-success');
+    }
+    if ($('body').hasClass('form-not-success')) {
+      $('body').removeClass('form-not-success');
+    }
+  });
+
+
+
   //Hide Loading Box (Preloader)
   function handlePreloader() {
     if ($(".preloader").length) {
@@ -515,4 +576,23 @@
   $(window).on("load", function () {
     handlePreloader();
   });
+
+
+
+  /* WebT custom select */
+  let webt_select = document.querySelectorAll('.webt-select');
+
+  for (let i=0; i < webt_select.length; i++) {
+    webt_select[i].addEventListener('click', () => {
+
+      if (webt_select[i].classList.contains('--list-opened')) {
+        webt_select[i].classList.remove('--list-opened');
+        return false
+      }
+
+      webt_select[i].classList.add('--list-opened');
+
+    });
+  }
+
 })(window.jQuery);

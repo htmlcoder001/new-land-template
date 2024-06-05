@@ -178,7 +178,7 @@
                             </div>
                             <div class="phone">
                                 <p>Have any questions?</p>
-                                <a href="#">+34 631 564 999</a>
+                                <a href="tel:+34631564999">+34 631 564 999</a>
                             </div>
                         </div>
                     </div>
@@ -794,9 +794,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="contact-btn">
+                        <!--<div class="contact-btn">
                             <a class="main-btn primary" href="#">learn more <i class="las la-arrow-right"></i></a>
-                        </div>
+                        </div>-->
                         <div class="contact-quote d-flex mt-40">
                             <div class="contact-icon">
                                 <img src="assets/img/noteicon.png" alt="icon">
@@ -814,75 +814,60 @@
                             <p class="quotation-desc">
                                 Please provide the information and our account manager will contact you to provide a personalized quote.
                             </p>
-                            <form class="contactForm" method="post" action="#" novalidate="novalidate">
+                            <form class="contactForm" method="post" action="" id="main_form">
                                 <div class="row">
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label">Name
-                                        </label>
-                                        <input class="form-control" type="text" placeholder="Name" required="">
+                                        <label class="form-label">Name</label>
+                                        <input class="form-control" type="text" name="form_name" placeholder="Name" required="required">
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label">Company Name
-                                        </label>
-                                        <input class="form-control" type="text" placeholder="Compnay Name" required="">
+                                        <label class="form-label">Company Name</label>
+                                        <input class="form-control" type="text" name="company_name" placeholder="Company Name">
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label">Contact Number
-                                        </label>
-                                        <input class="form-control" type="tel" placeholder="Contact Number" required="">
+                                        <label class="form-label">WhatsApp / Telegram</label>
+                                        <input class="form-control" type="tel" name="contact_number" placeholder="WhatsApp / Telegram" required="required">
                                     </div>
                                     <div class="col-12 col-md-6">
-                                        <label class="form-label">E-mail
-                                        </label>
-                                        <input class="form-control" type="email" placeholder="E-mail" required="">
+                                        <label class="form-label">E-mail</label>
+                                        <input class="form-control" type="email" name="form_email" placeholder="E-mail" required="required">
                                     </div>
-                                    <!--<div class="col-12 col-md-6">
-                                        <label class="form-label">Service Type</label>
-                                        <select class="form-control">
-                                            <option>Fulfilment for online stores</option>
-                                            <option>Courier services</option>
-                                            <option>Call Centre</option>
-                                            <option>Consulting</option>
-                                        </select>
-                                        <div class="nice-select form-control">
-                                            <span class="current">Standard Courier</span>
-                                            <ul class="list">
-                                                <li class="option">
-                                                    Fulfilment for online stores
-                                                </li>
-                                                <li class="option">
-                                                    Courier services
-                                                </li>
-                                                <li class="option">
-                                                    Call Centre
-                                                </li>
-                                                <li class="option">
-                                                    Consulting
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>-->
+                                    
     
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Product Category</label>
-                                        <select class="form-control">
-                                            <option>Dental</option>
-                                            <option>Nutraceuticals</option>
-                                            <option>Physical goods</option>
-                                        </select>
-                                        <div class="nice-select form-control">
+                                        <div class="webt-select">
+                                            <input type="text" readonly id="product_category_value" class="webt-select-value" value="Select">
+                                            
+                                            <div class="webt-select-list">
+                                                <label for="product_category_dental" class="webt-select-list-item">
+                                                    <input type="checkbox" name="product_category[]" class="webt-select-item-input" id="product_category_dental" value="Dental">
+                                                    <span class="webt-select-item-title">Dental</span>
+                                                </label>
+                                                <label for="product_category_nutraceuticals" class="webt-select-list-item">
+                                                    <input type="checkbox" name="product_category[]" class="webt-select-item-input" id="product_category_nutraceuticals" value="Nutraceuticals">
+                                                    <span class="webt-select-item-title">Nutraceuticals</span>
+                                                </label>
+                                                <label for="product_category_physical" class="webt-select-list-item">
+                                                    <input type="checkbox" name="product_category[]" class="webt-select-item-input" id="product_category_physical" value="Physical goods">
+                                                    <span class="webt-select-item-title">Physical goods</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <!--<div class="nice-select form-control" data-select-name="product_category">
                                             <span class="current">Select</span>
                                             <ul class="list">
                                                 <li class="option">Dental</li>
                                                 <li class="option">Nutraceuticals</li>
                                                 <li class="option">Physical goods</li>
                                             </ul>
-                                        </div>
+                                        </div>-->
                                     </div>
     
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Delivery Locations</label>
-                                        <select class="form-control">
+                                        <select name="delivery_locations" class="form-control">
                                             <option>Spain</option>
                                             <option>Italy</option>
                                             <option>Portugal</option>
@@ -898,7 +883,7 @@
                                             <option>Greece</option>
                                             <option>Croatia</option>
                                         </select>
-                                        <div class="nice-select form-control">
+                                        <!--<div class="nice-select form-control" data-select-name="delivery_locations">
                                             <span class="current">Select</span>
                                             <ul class="list">
                                                 <li class="option">Spain</li>
@@ -916,16 +901,16 @@
                                                 <li class="option">Greece</li>
                                                 <li class="option">Croatia</li>
                                             </ul>
-                                        </div>
+                                        </div>-->
                                     </div>
                                     
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Payout Type</label>
-                                        <select class="form-control">
+                                        <select name="payout_type" class="form-control">
                                             <option>Cash on delivery</option>
                                             <option>Pre-payment</option>
                                         </select>
-                                        <div class="nice-select form-control">
+                                        <!--<div class="nice-select form-control" data-select-name="payout_type">
                                             <span class="current">Cash on delivery</span>
                                             <ul class="list">
                                                 <li class="option">
@@ -935,12 +920,12 @@
                                                     Pre-payment
                                                 </li>
                                             </ul>
-                                        </div>
+                                        </div>-->
                                     </div>
 
                                     <div class="col-12 col-md-6">
                                         <label class="form-label">Volume per month</label>
-                                        <input class="form-control" type="text" placeholder="Volume per month" required="">
+                                        <input class="form-control" type="text" name="form_volume" placeholder="Volume per month" required="required">
                                     </div>
 
                                     <!--<div class="col-12 col-md-6">
@@ -956,9 +941,9 @@
                                     </div>-->
 
                                     <div class="col-12">
-                                        <a href="#" class="main-btn primary">
+                                        <button type="submit" class="main-btn primary form-button-submit">
                                             submit request <i class="las la-arrow-right"></i>
-                                        </a>
+                                        </button>
                                     </div>
 
                                 </div>
@@ -970,6 +955,17 @@
         </div>
     </div>
 
+    <style>
+        .form-select-input {
+            /*display: block!important;
+            -webkit-appearance: auto;
+            -moz-appearance: auto;
+            appearance: auto;*/
+        }
+        
+        
+    </style>
+    
     <!-- Blog Section  -->
 
     <div style="display:none;" class="blog-area gray-bg section-padding">
@@ -1101,25 +1097,22 @@
 
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-12">
-                                <h6>Company</h6>
+                                <h6>&nbsp;</h6>
                                 <ul>
                                     <li>
-                                        <a href="#">About Us</a>
-                                        <a href="#">Meet Our Team</a>
-<!--                                        <a href="blog-standard.html">News & Media</a>-->
-                                        <a href="project.html">Our Project</a>
-                                        <a href="contact.html">Contact</a>
+                                        <a href="index.html">Home</a>
+                                        <a href="#our_services">Services</a>
+                                        <a href="#our_system">Our System</a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="col-lg-6 col-md-6 col-12 wow fadeInUp animated" data-wow-delay="300ms">
-                                <h6>Services</h6>
+                                <h6>&nbsp;</h6>
                                 <ul>
                                     <li>
-                                        <a href="#">Fulfilment for online stores</a>
-                                        <a href="#">Courier services</a>
-                                        <a href="#">Call Centre</a>
-                                        <a href="#">Consulting</a>
+                                        <a href="#delivered_pckages">Our Clients</a>
+                                        <a href="contact.html">Contact</a>
+                                        <a href="#form_block">Get Started</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1157,9 +1150,7 @@
                     <div class="social-area">
                         <a href=""><i class="lab la-facebook-f"></i></a>
                         <a href=""><i class="lab la-youtube"></i></a>
-                        <a href=""><i class="lab la-twitter"></i></a>
                         <a href=""><i class="lab la-instagram"></i></a>
-                        <a href=""><i class="lab la-linkedin"></i></a>
                     </div>
                 </div>
             </div>
@@ -1168,6 +1159,13 @@
 
     <!-- Scroll Top Area -->
     <a href="#top" class="go-top"><i class="las la-angle-up"></i></a>
+
+    <div class="overlay"></div>
+    
+    <div class="form-notification">
+        <p class="form-notification__text">Form has been sent!</p>
+        <p class="form-notification__text --error-text">Something wrong. Please try again.</p>
+    </div>
 
     <!-- Popper JS -->
     <script src="assets/js/popper.min.js"></script>
