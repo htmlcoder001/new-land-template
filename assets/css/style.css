@@ -5971,15 +5971,20 @@ button[type="submit"].form-button-submit {
   transition: all 0.15s ease-in-out;
   width: 5px;
 }
+.webt-select.--list-opened:after {
+  -webkit-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
 .webt-select-value {
   border: none;
   height: 100%;
   width: 100%;
-  pointer-events: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 .webt-select-list {
   background-color: #fff;
@@ -6027,6 +6032,9 @@ button[type="submit"].form-button-submit {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   display: block;
+}
+.webt-select-list-item:hover {
+  background-color: #f6f6f6;
 }
 .webt-select-item-input {
   display: none;

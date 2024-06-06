@@ -580,23 +580,43 @@
 
 
   /* WebT custom select */
-  let webt_select = document.querySelectorAll('.webt-select');
 
-  for (let i=0; i < webt_select.length; i++) {
-    webt_select[i].addEventListener('click', () => {
+  $('.webt-select-value').on('click', function (e) {
+    e.preventDefault();
 
-      if (webt_select[i].classList.contains('--list-opened')) {
-        webt_select[i].classList.remove('--list-opened');
-        return false
+    let clicked_value = $(this);
+    let select_block = clicked_value.parent();
+
+
+    if (select_block.hasClass('--list-opened')) {
+      select_block.removeClass('--list-opened');
+      //console.log('Select list closed!');
+
+      let searchIDs = select_block.find("input:checkbox:checked").map(function(){
+        return $(this).val();
+      }).get();
+
+      if (searchIDs == '') {
+        clicked_value.text('Select');
+        clicked_value.val('Select');
+      } else {
+        clicked_value.text(searchIDs.toString());
+        clicked_value.val(searchIDs.toString());
       }
 
-      webt_select[i].classList.add('--list-opened');
+      return false;
+    } else {
+      select_block.addClass('--list-opened');
+      clicked_value.text('Close');
+      clicked_value.val('Close');
+      //console.log('Select list opened!');
 
-      webt_select[i].querySelector('.webt-select-list .webt-select-list-item').addEventListener('click', () => {
 
-      });
+    }
 
-    });
-  }
+
+  });
+
+
 
 })(window.jQuery);

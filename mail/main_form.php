@@ -17,10 +17,10 @@ if (isset($_POST['form_email']) && !empty($_POST['form_email'])) {
   $form_email = 'E-mail: ' . $_POST['form_email'] . "\n";
 }
 if (isset($_POST['product_category']) && !empty($_POST['product_category'])) {
-  $product_category = 'Product Category: ' . $_POST['product_category'] . "\n";
+  $product_category = 'Product Category: ' . join(", ", $_POST['product_category']) . "\n";
 }
 if (isset($_POST['delivery_locations']) && !empty($_POST['delivery_locations'])) {
-  $delivery_locations = 'Delivery Locations: ' . $_POST['delivery_locations'] . "\n";
+  $delivery_locations = 'Delivery Locations: ' . join(", ", $_POST['delivery_locations']) . "\n";
 }
 if (isset($_POST['payout_type']) && !empty($_POST['payout_type'])) {
   $payout_type = 'Payout Type: ' . $_POST['payout_type'] . "\n";
